@@ -1,0 +1,93 @@
+/* Global ==================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f2f5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
+/* Title ==================== */
+h2 {
+  color: #363f5f;
+  font-weight: 400;
+  margin-top: 3.2rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Header ==================== */
+header {
+  background: #2d4a22;
+  padding: 2rem 0 10rem;
+  text-align: center;
+}
+
+#logo {
+  color: #fff;
+  font-weight: 100;
+}
+
+/* Balance =================== */
+#balance {
+  margin-top: -8rem;
+}
+#balance h2 {
+  color: #fff;
+  margin-top: 0;
+}
+
+/* Card =================== */
+.card {
+  background: #fff;
+  border-radius: .25rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  color: var(--dark-blue);
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+}
+
+.card.total {
+  background: #49aa26;
+  color: #fff;
+}
+
+/* Table =================== */
+#data-table {
+width: 100%;
+border-spacing: 0 0.5rem;
+}
+
+table td {
+  background: #fff;
+}
+
+table th {
+  background: #fff;
+  color: #969cb3;
+  text-align: left;
+  padding: 1rem 2rem;
+  font-weight: 400;
+}
+
+/* Footer =================== */
+footer {
+  text-align: center;
+}
