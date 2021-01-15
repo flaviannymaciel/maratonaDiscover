@@ -1,4 +1,8 @@
 /* Global ==================== */
+:root {
+  --dark-blue: #363f5f;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,9 +19,9 @@ body {
   margin: auto;
 }
 
-/* Title ==================== */
+/* Titles ==================== */
 h2 {
-  color: #363f5f;
+  color: var(--dark-blue);
   font-weight: 400;
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
@@ -71,23 +75,52 @@ header {
 
 /* Table =================== */
 #data-table {
-width: 100%;
-border-spacing: 0 0.5rem;
+  width: 100%;
+  border-spacing: 0 0.5rem;
 }
 
 table td {
   background: #fff;
+  color: #969cb3;
+  padding: 1rem 2rem;
 }
 
 table th {
   background: #fff;
-  color: #969cb3;
-  text-align: left;
-  padding: 1rem 2rem;
   font-weight: 400;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+table tbody tr {
+  opacity: .7;
+}
+
+table tbody tr:hover {
+  opacity: 1;
+}
+
+table thead tr th:first-child, 
+table tbody tr td:first-child {
+  border-radius: .25rem 0 0 .25rem;
+}
+
+td.description {
+  color: var(--dark-blue);
+}
+
+td.expense {
+  color: #e92929;
+}
+
+td  .income {
+  color: #12a454;
 }
 
 /* Footer =================== */
 footer {
   text-align: center;
+  padding: 4rem 0 2rem;
+  color: var(--dark-blue);
+  opacity: .6;
 }
