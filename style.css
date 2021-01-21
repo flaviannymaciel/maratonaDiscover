@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+html {
+  font-size: 93.75%; /*15px*/
+}
+
 body {
   background: #f0f2f5;
   font-family: 'Poppins', sans-serif;
@@ -25,6 +29,35 @@ h2 {
   font-weight: 400;
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
+}
+
+/* escondendo dessa forma para não alterar os leitores de tela (acessibilidade) */
+.sr-only {
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ padding: 0;
+ margin: -1px;
+ overflow: hidden;
+ clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width: 0;
+}
+
+/* Links e Buttons ==================== */
+a {
+  text-decoration: none;
+  color: #49aa26;
+}
+
+a:hover{
+  color: #3dd705;
+
+}
+/* propriedades do block para aplicar margin e inline para o link ser clicável somente no componente 'a' */
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
 }
 
 /* Header ==================== */
@@ -48,6 +81,13 @@ header {
   margin-top: 0;
 }
 
+/* Transition =================== */
+#transition {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
 /* Card =================== */
 .card {
   background: #fff;
@@ -60,6 +100,9 @@ header {
 .card h3 {
   font-weight: 400;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card p {
@@ -77,11 +120,12 @@ header {
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
+  color: #969cb3;
+ 
 }
 
 table td {
   background: #fff;
-  color: #969cb3;
   padding: 1rem 2rem;
 }
 
@@ -105,6 +149,11 @@ table tbody tr td:first-child {
   border-radius: .25rem 0 0 .25rem;
 }
 
+table thead tr th:last-child, 
+table tbody tr td:last-child {
+  border-radius: 0 .25rem .25rem 0;
+}
+
 td.description {
   color: var(--dark-blue);
 }
@@ -113,7 +162,7 @@ td.expense {
   color: #e92929;
 }
 
-td  .income {
+td.income {
   color: #12a454;
 }
 
@@ -123,4 +172,16 @@ footer {
   padding: 4rem 0 2rem;
   color: var(--dark-blue);
   opacity: .6;
+}
+
+/* Responsive =================== */
+@media (min-width: 800px) {
+html {
+  font-size: 83.5%;
+}
+#balance {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /*ou repeat(3, fr)*/
+  gap: 2rem;
+}
 }
