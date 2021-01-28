@@ -34,15 +34,15 @@ h2 {
 
 /* escondendo dessa forma para não alterar os leitores de tela (acessibilidade) */
 .sr-only {
- position: absolute;
- width: 1px;
- height: 1px;
- padding: 0;
- margin: -1px;
- overflow: hidden;
- clip: rect(0, 0, 0, 0);
-white-space: nowrap;
-border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 /* Links e Buttons ==================== */
@@ -53,8 +53,8 @@ a {
 
 a:hover{
   color: #3dd705;
-
 }
+
 /* propriedades do block para aplicar margin e inline para o link ser clicável somente no componente 'a' */
 .button.new {
   display: inline-block;
@@ -211,6 +211,7 @@ td.income {
 
   opacity: 0;
   visibility: hidden;
+  z-index: 999;
 }
 
 .modal-overlay.active {
@@ -221,6 +222,8 @@ td.income {
 .modal {
   background-color: #f0f2f5;
   padding: 2.4rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Form =================== */
@@ -254,7 +257,7 @@ margin-top: .8rem;
 }
 
 .input-group.actions button,
-.input-group.actions.button {
+.input-group.actions .button {
   width: 48%;
 }
 
@@ -269,7 +272,7 @@ footer {
 /* Responsive =================== */
 @media (min-width: 800px) {
 html {
-  font-size: 83.5%;
+  font-size: 87.5%;
 }
 #balance {
   display: grid;
